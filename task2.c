@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
         if(strcmp(argv[i],"-o")==0)
             output = fopen(argv[++i],"w");
         else if(strcmp(argv[i],"-i")==0)
-            input = fopen(argv[++i], "r")
+            input = fopen(argv[++i], "r");
         else if (strcmp(argv[i],"-b")==0){
             flag = 1;
         }
@@ -33,6 +33,7 @@ int main(int argc, char **argv) {
     else{
         task1a(input, output);
     }
+    fclose(output);
 }
 
 
